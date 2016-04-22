@@ -4,9 +4,9 @@ namespace PureLogic
 {
     public sealed class DisjointUnion<T>: Map<T>
     {
-        public readonly Bag<T> InputA;
+        public Bag<T> InputA { get; }
 
-        public readonly Bag<T> InputB;
+        public Bag<T> InputB { get; }
 
         public DisjointUnion(Bag<T> inputA, Bag<T> inputB)
         {

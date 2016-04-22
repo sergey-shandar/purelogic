@@ -5,9 +5,9 @@ namespace PureLogic
 {
     public sealed class SelectMany<I, T> : Map<T>
     {
-        public readonly Bag<I> Input;
+        public Bag<I> Input { get; }
 
-        public readonly Func<I, IEnumerable<T>> Func;
+        public Func<I, IEnumerable<T>> Func { get; }
 
         public SelectMany(Bag<I> input, Func<I, IEnumerable<T>> func)
         {
