@@ -16,4 +16,10 @@ namespace PureLogic
 
         public override R Accept<R>(IVisitor<R> visitor) => visitor.Visit(this);
     }
+
+    public static class DisjointUnionX
+    {
+        public static Bag<T> DisjointUnion<T>(this Bag<T> a, Bag<T> b)
+            => new DisjointUnion<T>(a, b);
+    }
 }

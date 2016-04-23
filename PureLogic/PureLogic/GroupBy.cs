@@ -16,4 +16,11 @@ namespace PureLogic
             Func = func;
         }
     }
+
+    public static class GroupByX
+    {
+        public static Bag<Tuple<K, T>> GroupBy<K, T>(
+            this Bag<Tuple<K, T>> input, Func<T, T, T> func)
+            => new GroupBy<K, T>(input, func);
+    }
 }

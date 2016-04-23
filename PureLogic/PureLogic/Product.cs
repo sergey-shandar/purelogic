@@ -16,4 +16,10 @@ namespace PureLogic
             InputB = b;
         }
     }
+
+    public static class ProductX
+    {
+        public static Bag<Tuple<A, B>> Product<A, B>(this Bag<A> a, Bag<B> b)
+            => new Product<A, B>(a, b);
+    }
 }

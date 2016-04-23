@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PureLogic
 {
@@ -16,5 +17,17 @@ namespace PureLogic
         }
 
         public override R Accept<R>(IVisitor<R> visitor) => visitor.Visit(this);
+    }
+
+    public static class SelectManyX
+    {
+        public static Bag<T> SelectMany<I, T>(this Bag<I> input, Func<I, IEnumerable<T>> func)
+            => new SelectMany<I, T>(input, func);
+
+        public static Bag<T> Select<I, T>(this Bag<I> input, Func<I, T> func)
+            => input.SelectMany(i => new[] { func(i) });
+
+        public static Bag<T> Where<T>(this Bag<T> input, Func<T, bool> func)
+            => input.SelectMany(i => func(i) ? Enumerable.Empty<T>() : new[] { i });
     }
 }
