@@ -12,5 +12,11 @@ namespace UnitTests
         {
             new Input<Tuple<int, string>>().GroupBy((a, b) => a + b);
         }
+
+        [TestMethod]
+        public void AggregateTest()
+        {
+            new Input<int>().Aggregate((a, b) => a * b);
+        }
     }
 }

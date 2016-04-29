@@ -12,7 +12,8 @@ namespace UnitTests
             var selectMany = One.Value
                 .SelectMany(_ => "hello world!")
                 .Select(c => "x" + c)
-                .Where(s => s == "xh");
+                .Where(s => s == "xh")
+                .OfType<int>();
         }
     }
 }

@@ -22,5 +22,11 @@ namespace PureLogic
         public static Bag<Tuple<K, T>> GroupBy<K, T>(
             this Bag<Tuple<K, T>> input, Func<T, T, T> func)
             => new GroupBy<K, T>(input, func);
+
+        public static Bag<T> Aggregate<T>(this Bag<T> input, Func<T, T, T> func)
+            => input
+                .Select(i => Tuple.Create(new Void(), i))
+                .GroupBy(func)
+                .Select(i => i.Item2);
     }
 }
