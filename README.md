@@ -1,6 +1,6 @@
 # PureLogic
 
-## Classes
+## Bag Classes
 
 - [Bag](PureLogic/PureLogic/Bag.cs)
     - [Map](PureLogic/PureLogic/Map.cs)
@@ -11,3 +11,7 @@
         - [Input](PureLogic/PureLogic/Input.cs)
         - [GroupBy](PureLogic/PureLogic/GroupBy.cs)
         - [Product](PureLogic/PureLogic/Product.cs)
+
+## Utilities
+
+- [Option](PureLogic/PureLogic/Option.cs)
