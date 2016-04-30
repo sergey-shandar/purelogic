@@ -12,6 +12,10 @@
         - [GroupBy](PureLogic/PureLogic/GroupBy.cs)
         - [Product](PureLogic/PureLogic/Product.cs)
 
+## Methods
+
+See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.enumerable_methods(v=vs.110).aspx).
+
 ## Utilities
 
 - [Option](PureLogic/PureLogic/Option.cs)
