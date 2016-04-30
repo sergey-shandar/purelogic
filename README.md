@@ -19,3 +19,4 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
 ## Utilities
 
 - [Option](PureLogic/PureLogic/Option.cs)
+- [NumericPolicy](PureLogic/PureLogic/NumericPolicy.cs)
