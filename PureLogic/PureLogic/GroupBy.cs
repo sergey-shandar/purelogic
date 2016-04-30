@@ -41,19 +41,33 @@ namespace PureLogic
         public static Bag<bool> Any(this Bag<bool> input)
             => input.Aggregate(false, (a, b) => a || b);
 
-        public static Bag<int> Sum(this Bag<int> input)
-            => input.Aggregate(0, (a, b) => a + b);
+        public static Bag<Option<T>> Average<P, T>(this P policy, Bag<T> input)
+            where P : struct, INumericPolicy<T>
+            => input
+                .Select(v => Tuple.Create(v, 1L))
+                .Aggregate((a, b) => Tuple.Create(policy.Plus(a.Item1, b.Item1), a.Item2 + b.Item2))
+                .Select(x => x.Select(v => policy.Div(v.Item1, policy.FromLong(v.Item2))));
+
+        public static Bag<Option<double>> Average(this Bag<double> input)
+            => new NumericPolicy().Average(input);
+
+        public static Bag<Option<decimal>> Average(this Bag<decimal> input)
+            => new NumericPolicy().Average(input);
+
+        public static Bag<long> Count<T>(this Bag<T> input)
+            => input.Select(_ => 1L).Sum();
+
+        public static Bag<T> Sum<P, T>(this P policy, Bag<T> input)
+            where P : struct, INumericPolicy<T>
+            => input.Aggregate(policy.FromLong(0), policy.Plus);
 
         public static Bag<long> Sum(this Bag<long> input)
-            => input.Aggregate(0, (a, b) => a + b);
-
-        public static Bag<float> Sum(this Bag<float> input)
-            => input.Aggregate(0, (a, b) => a + b);
+            => new NumericPolicy().Sum(input);
 
         public static Bag<double> Sum(this Bag<double> input)
-            => input.Aggregate(0, (a, b) => a + b);
+            => new NumericPolicy().Sum(input);
 
         public static Bag<decimal> Sum(this Bag<decimal> input)
-            => input.Aggregate(0, (a, b) => a + b);
+            => new NumericPolicy().Sum(input);
     }
 }
