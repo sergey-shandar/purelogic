@@ -2,6 +2,8 @@
 
 ## Bag Classes
 
+See also [Multiset](https://en.wikipedia.org/wiki/Multiset).
+
 - [Bag](PureLogic/PureLogic/Bag.cs)
     - [Map](PureLogic/PureLogic/Map.cs)
         - [SelectMany](PureLogic/PureLogic/SelectMany.cs)
