@@ -18,13 +18,29 @@ See also [Multiset](https://en.wikipedia.org/wiki/Multiset).
 
 See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.enumerable_methods(v=vs.110).aspx).
 
-- `Bag<Option<T>> Bag<T>.Aggregate<T>(Func<T, T, T> func)`
-- `Bag<T> Bag<T>.Aggregate<T>(T default, Func<T, T, T> func)`
-- `Bag<bool> Bag<bool>.All()`
-- `Bag<bool> Bag<T>.All(Func<T, bool> func)`
-- `Bag<bool> Bag<T>.Any()`
-- `Bag<bool> Bag<T>.Any(Func<T, bool> func)`
-
+- Aggregate
+    - `Bag<Option<T>> Bag<T>.Aggregate<T>(Func<T, T, T> func)`
+    - `Bag<T> Bag<T>.Aggregate<T>(T default, Func<T, T, T> func)`
+- All/Any
+    - `Bag<bool> Bag<T>.All(Func<T, bool> func)`
+    - `Bag<bool> Bag<T>.Any(Func<T, bool> func)`
+- Average/Count
+    - Average
+        - `Bag<long> Bag<long>.Average<long>()`
+        - `Bag<double> Bag<double>.Average<double>()`
+        - `Bag<decimal> Bag<decimal>.Average<decimal>()`
+    - Count
+        - `Bag<long> Bag<T>.Count()`
+- Contains 
+    - `Bag<bool> Bag<T>.Contains<T>(T value)`
+- DefaultIfEmpy
+    - `Bag<T> Bag<T>.DefaultIfEmpty(T value = dafault(T))`
+- Distinct/Except
+    - `Bag<T> Bag<T>.Distinct(Bag<T> b)`
+    - `Bag<T> Bag<T>.Except(Bag<T> b)`
+- Emptry
+    - `Bag<T> Empty<T>()` 
+     
 ## Utilities
 
 - [Option](PureLogic/PureLogic/Option.cs)
