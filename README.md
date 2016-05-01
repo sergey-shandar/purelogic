@@ -18,6 +18,13 @@ See also [Multiset](https://en.wikipedia.org/wiki/Multiset).
 
 See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.enumerable_methods(v=vs.110).aspx).
 
+- `Bag<Option<T>> Bag<T>.Aggregate<T>(Func<T, T, T> func)`
+- `Bag<T> Bag<T>.Aggregate<T>(T default, Func<T, T, T> func)`
+- `Bag<bool> Bag<bool>.All()`
+- `Bag<bool> Bag<T>.All(Func<T, bool> func)`
+- `Bag<bool> Bag<T>.Any()`
+- `Bag<bool> Bag<T>.Any(Func<T, bool> func)`
+
 ## Utilities
 
 - [Option](PureLogic/PureLogic/Option.cs)
