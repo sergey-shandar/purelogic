@@ -21,25 +21,29 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
 - Aggregate
     - `Bag<Option<T>> Bag<T>.Aggregate<T>(Func<T, T, T> func)`
     - `Bag<T> Bag<T>.Aggregate<T>(T default, Func<T, T, T> func)`
-- All/Any
-    - `Bag<bool> Bag<T>.All(Func<T, bool> func)`
-    - `Bag<bool> Bag<T>.Any(Func<T, bool> func)`
-- Average/Count
-    - Average
-        - `Bag<long> Bag<long>.Average<long>()`
-        - `Bag<double> Bag<double>.Average<double>()`
-        - `Bag<decimal> Bag<decimal>.Average<decimal>()`
-    - Count
-        - `Bag<long> Bag<T>.Count()`
-- Contains 
-    - `Bag<bool> Bag<T>.Contains<T>(T value)`
-- DefaultIfEmpy
-    - `Bag<T> Bag<T>.DefaultIfEmpty(T value = dafault(T))`
+    - All/Any/DefaultIfEmpty/Contains
+        - `Bag<bool> Bag<T>.All(Func<T, bool> func)`
+        - `Bag<bool> Bag<T>.Any(Func<T, bool> func)`
+        - `Bag<bool> Bag<T>.Contains<T>(T value)`
+        - `Bag<T> Bag<T>.DefaultIfEmpty(T value = default(T))`
+    - Min/Max
+        - `Bag<Option<T>> Bag<T>.Min()`
+        - `Bag<Option<T>> Bag<T>.Max()`
+    - Average/Count
+        - Average
+            - `Bag<long> Bag<long>.Average<long>()`
+            - `Bag<double> Bag<double>.Average<double>()`
+            - `Bag<decimal> Bag<decimal>.Average<decimal>()`
+        - Count
+            - `Bag<long> Bag<T>.Count()`
 - Distinct/Except
     - `Bag<T> Bag<T>.Distinct(Bag<T> b)`
     - `Bag<T> Bag<T>.Except(Bag<T> b)`
 - Emptry
-    - `Bag<T> Empty<T>()` 
+    - `Bag<T> Empty<T>()`
+- GroupBy
+    - `Bag<KeyValuePair<K, V>> Bag<KeyValuePair<K, V>>.GroupBy(Func<V, V, V> func)`
+    - `Bag<KeyValuePair<K, T>> Bag<T>.GroupBy(Func<T, K> keyFunc, Func<T, T, T> reduceFunc)`
      
 ## Utilities
 
