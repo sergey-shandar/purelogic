@@ -31,19 +31,31 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
         - `Bag<Option<T>> Bag<T>.Max()`
     - Average/Count
         - Average
-            - `Bag<long> Bag<long>.Average<long>()`
-            - `Bag<double> Bag<double>.Average<double>()`
-            - `Bag<decimal> Bag<decimal>.Average<decimal>()`
+            - `Bag<long> Bag<long>.Average()`
+            - `Bag<double> Bag<double>.Average()`
+            - `Bag<decimal> Bag<decimal>.Average()`
         - Count
             - `Bag<long> Bag<T>.Count()`
-- Distinct/Except
+        - Sum
+            - `Bag<long> Bag<long>.Sum()` 
+            - `Bag<double> Bag<double>.Sum()`
+            - `Bag<decimal> Bag<decimal>.Sum()`
+- Distinct/Except/BagEqual
     - `Bag<T> Bag<T>.Distinct(Bag<T> b)`
     - `Bag<T> Bag<T>.Except(Bag<T> b)`
+    - `Bag<T> Bag<T>.Intersect(Bag<T> b)`
+    - `Bag<bool> Bag<T>.Equal(Bag<T> b)`
+    - `Bag<T> Bag<T>.Union(Bag<T> b)`
 - Emptry
     - `Bag<T> Empty<T>()`
 - GroupBy
     - `Bag<KeyValuePair<K, V>> Bag<KeyValuePair<K, V>>.GroupBy(Func<V, V, V> func)`
     - `Bag<KeyValuePair<K, T>> Bag<T>.GroupBy(Func<T, K> keyFunc, Func<T, T, T> reduceFunc)`
+- Select
+    - `Bag<T> Bag<S>.OfType<S, T>()`
+    - `Bag<T> Bag<S>.Select<S, T>(Func<S, T> func)`
+    - `Bag<T> Bag<S>.Select<S, T>(Func<S, IEnumerable<T>> func)`
+    - `Bag<T> Bag<T>.Where<T>(Func<T, bool> func)`
      
 ## Utilities
 
