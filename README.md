@@ -51,10 +51,10 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
 - GroupBy
     - `Bag<KeyValuePair<K, V>> Bag<KeyValuePair<K, V>>.GroupBy(Func<V, V, V> func)`
     - `Bag<KeyValuePair<K, T>> Bag<T>.GroupBy(Func<T, K> keyFunc, Func<T, T, T> reduceFunc)`
-- Select
+- SelectMany
     - `Bag<T> Bag<S>.OfType<S, T>()`
     - `Bag<T> Bag<S>.Select<S, T>(Func<S, T> func)`
-    - `Bag<T> Bag<S>.Select<S, T>(Func<S, IEnumerable<T>> func)`
+    - `Bag<T> Bag<S>.SelectMany<S, T>(Func<S, IEnumerable<T>> func)`
     - `Bag<T> Bag<T>.Where<T>(Func<T, bool> func)`
      
 ## Utilities
