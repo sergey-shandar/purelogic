@@ -44,7 +44,7 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
     - `Bag<T> Bag<T>.Distinct(Bag<T> b)`
     - `Bag<T> Bag<T>.Except(Bag<T> b)`
     - `Bag<T> Bag<T>.Intersect(Bag<T> b)`
-    - `Bag<bool> Bag<T>.Equal(Bag<T> b)`
+    - `Bag<bool> Bag<T>.BagEqual(Bag<T> b)`
     - `Bag<T> Bag<T>.Union(Bag<T> b)`
 - Empty
     - `Bag<T> Empty<T>()`
