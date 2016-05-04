@@ -38,7 +38,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bag.cs" />
-    <Compile Include="DisjointUnion.cs" />
     <Compile Include="GroupBy.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="Map.cs" />
