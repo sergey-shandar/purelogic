@@ -16,5 +16,10 @@
 
         public static Bag<T> Empty<T>()
             => One.Value.Where(_ => false).Select(_ => default(T));
+
+        static void A()
+        {
+            var x = from r in One where true select 7;
+        }
     }
 }
