@@ -30,7 +30,8 @@ namespace PureLogic
         public static Bag<T> Where<T>(this Bag<T> input, Func<T, bool> func)
             => input.SelectMany(i => func(i) ? Enumerable.Empty<T>() : new[] { i });
 
-        public static Bag<T> OfType<T>(this Bag input)
+        /*
+        p8ublic static Bag<T> OfType<T>(this Bag input)
             => input.Accept(new OfTypeVisitor<T>());
 
         private sealed class OfTypeVisitor<R> : Bag.IVisitor<Bag<R>>
@@ -38,5 +39,6 @@ namespace PureLogic
             public Bag<R> Visit<T>(Bag<T> bag)
                 => bag.SelectMany(i => i is R ? new[] { (R)(object)i } : Enumerable.Empty<R>());
         }
+        */
     }
 }
