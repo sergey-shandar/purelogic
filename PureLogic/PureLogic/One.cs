@@ -1,8 +1,7 @@
 ﻿namespace PureLogic
 {
-    public abstract class One: Reduce<Void>
+    public abstract class One: Reduce<int>
     {
-        private One() { }
     }
 
     public static class OneX
