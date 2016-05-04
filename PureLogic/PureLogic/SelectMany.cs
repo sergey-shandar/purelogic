@@ -4,10 +4,10 @@ namespace PureLogic
 {
     public static class SelectManyX
     {
-        public static Bag<T> Select<I, T>(this Bag<I> input, Func<I, T> func)
+        public static Bag Select(this Bag input, Func<int, int> func)
             => null;
 
-        public static Bag<T> Where<T>(this Bag<T> input, Func<T, bool> func)
+        public static Bag Where(this Bag input, Func<int, bool> func)
             => null;
     }
 }
