@@ -16,7 +16,7 @@ namespace PureLogic
             Value = value;
         }
     }
-
+    /*
     public static class OptionX
     {
         public static Option<T> Option<T>(this T value)
@@ -40,4 +40,5 @@ namespace PureLogic
         public static Option<T> OptionBinaryFunc<T>(this Func<T, T, T> func, Option<T> a, Option<T> b)
             => a.Accept(av => b.Accept(bv => func(av, bv), av).Option(), b);
     }
+    */
 }

@@ -41,9 +41,7 @@
     <Compile Include="DisjointUnion.cs" />
     <Compile Include="GroupBy.cs" />
     <Compile Include="Input.cs" />
-    <Compile Include="KeyValuePairX.cs" />
     <Compile Include="Map.cs" />
-    <Compile Include="NumericPolicy.cs" />
     <Compile Include="One.cs" />
     <Compile Include="Option.cs" />
     <Compile Include="Product.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace PureLogic
 {
-    public abstract class Reduce<T> : Bag<T>
+    public abstract class Reduce<T>: Bag<T>
     {
     }
 }
