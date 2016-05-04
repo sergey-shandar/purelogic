@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PureLogic;
 using FluentAssertions;
-
+/*
 namespace UnitTests
 {
     [TestClass]
@@ -16,3 +16,4 @@ namespace UnitTests
         }
     }
 }
+*/

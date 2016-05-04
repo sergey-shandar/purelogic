@@ -37,10 +37,12 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AggregateX.cs" />
     <Compile Include="Bag.cs" />
     <Compile Include="DisjointUnion.cs" />
     <Compile Include="GroupBy.cs" />
     <Compile Include="Input.cs" />
+    <Compile Include="KeyValuePairX.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="NumericPolicy.cs" />
     <Compile Include="One.cs" />

@@ -1,7 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PureLogic;
-using System;
+using System.Collections.Generic;
 
+/*
 namespace UnitTests
 {
     [TestClass]
@@ -10,7 +11,7 @@ namespace UnitTests
         [TestMethod]
         public void GroupByTest()
         {
-            new Input<Tuple<int, string>>().GroupBy((a, b) => a + b);
+            new Input<KeyValuePair<int, string>>().GroupBy((a, b) => a + b);
         }
 
         [TestMethod]
@@ -20,3 +21,4 @@ namespace UnitTests
         }
     }
 }
+*/
