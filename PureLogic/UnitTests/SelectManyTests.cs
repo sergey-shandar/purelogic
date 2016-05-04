@@ -15,12 +15,12 @@ namespace UnitTests
                 .Where(s => s == "xh")
                 .OfType<int>();
         }
-/*
+
         [TestMethod]
         public void LinqStyleTest()
         {
-            var x = from r in One where true select 7;
+            var x = from r in One.Value where true select 7;
         }
-        */
+
     }
 }
