@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace PureLogic
 {
-    public abstract class SelectMany<I, T> : Map<T>
+    public abstract class SelectMany<I, T> : Bag<T>
     {
     }
 
