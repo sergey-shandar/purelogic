@@ -37,7 +37,6 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AggregateX.cs" />
     <Compile Include="Bag.cs" />
     <Compile Include="DisjointUnion.cs" />
     <Compile Include="GroupBy.cs" />
