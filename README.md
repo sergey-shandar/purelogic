@@ -22,8 +22,11 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
     - `Bag<Option<T>> Bag<T>.Aggregate<T>(Func<T, T, T> func)`
     - `Bag<T> Bag<T>.Aggregate<T>(T default, Func<T, T, T> func)`
     - All/Any/DefaultIfEmpty/Contains
+        - `Bag<bool> Bag<bool>.AllTrue()`
         - `Bag<bool> Bag<T>.All(Func<T, bool> func)`
+        - `Bag<bool> Bag<bool>.AnyTrue()`
         - `Bag<bool> Bag<T>.Any(Func<T, bool> func)`
+        - `Bag<bool> Bag<T>.Any()`
         - `Bag<bool> Bag<T>.Contains<T>(T value)`
         - `Bag<T> Bag<T>.DefaultIfEmpty(T value = default(T))`
     - Min/Max
