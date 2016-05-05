@@ -18,7 +18,7 @@ See also [Multiset](https://en.wikipedia.org/wiki/Multiset).
 
 See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.enumerable_methods(v=vs.110).aspx).
 
-- Aggregate
+- [Aggregate](PureLogic/PureLogic/AggregateX.cs)
     - `Bag<Option<T>> Bag<T>.Aggregate<T>(Func<T, T, T> func)`
     - `Bag<T> Bag<T>.Aggregate<T>(T default, Func<T, T, T> func)`
     - All/Any/DefaultIfEmpty/Contains
