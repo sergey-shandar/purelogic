@@ -18,12 +18,15 @@ See also [Multiset](https://en.wikipedia.org/wiki/Multiset).
 
 See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.enumerable_methods(v=vs.110).aspx).
 
-- Aggregate
+- [Aggregate](PureLogic/PureLogic/AggregateX.cs)
     - `Bag<Option<T>> Bag<T>.Aggregate<T>(Func<T, T, T> func)`
     - `Bag<T> Bag<T>.Aggregate<T>(T default, Func<T, T, T> func)`
     - All/Any/DefaultIfEmpty/Contains
+        - `Bag<bool> Bag<bool>.AllTrue()`
         - `Bag<bool> Bag<T>.All(Func<T, bool> func)`
+        - `Bag<bool> Bag<bool>.AnyTrue()`
         - `Bag<bool> Bag<T>.Any(Func<T, bool> func)`
+        - `Bag<bool> Bag<T>.Any()`
         - `Bag<bool> Bag<T>.Contains<T>(T value)`
         - `Bag<T> Bag<T>.DefaultIfEmpty(T value = default(T))`
     - Min/Max
@@ -40,11 +43,10 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
             - `Bag<long> Bag<long>.Sum()` 
             - `Bag<double> Bag<double>.Sum()`
             - `Bag<decimal> Bag<decimal>.Sum()`
-- Distinct/Except/BagEqual
+- Distinct/Except/Union
     - `Bag<T> Bag<T>.Distinct(Bag<T> b)`
     - `Bag<T> Bag<T>.Except(Bag<T> b)`
     - `Bag<T> Bag<T>.Intersect(Bag<T> b)`
-    - `Bag<bool> Bag<T>.BagEqual(Bag<T> b)`
     - `Bag<T> Bag<T>.Union(Bag<T> b)`
 - Empty
     - `Bag<T> Empty<T>()`
@@ -56,6 +58,8 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
     - `Bag<T> Bag<S>.Select<S, T>(Func<S, T> func)`
     - `Bag<T> Bag<S>.SelectMany<S, T>(Func<S, IEnumerable<T>> func)`
     - `Bag<T> Bag<T>.Where<T>(Func<T, bool> func)`
+- BagEqual
+    - `Bag<bool> Bag<T>.BagEqual(Bag<T> b)`
      
 ## Utilities
 
