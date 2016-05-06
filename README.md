@@ -43,11 +43,10 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
             - `Bag<long> Bag<long>.Sum()` 
             - `Bag<double> Bag<double>.Sum()`
             - `Bag<decimal> Bag<decimal>.Sum()`
-- Distinct/Except/BagEqual
+- Distinct/Except/Union
     - `Bag<T> Bag<T>.Distinct(Bag<T> b)`
     - `Bag<T> Bag<T>.Except(Bag<T> b)`
     - `Bag<T> Bag<T>.Intersect(Bag<T> b)`
-    - `Bag<bool> Bag<T>.BagEqual(Bag<T> b)`
     - `Bag<T> Bag<T>.Union(Bag<T> b)`
 - Empty
     - `Bag<T> Empty<T>()`
@@ -59,6 +58,8 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
     - `Bag<T> Bag<S>.Select<S, T>(Func<S, T> func)`
     - `Bag<T> Bag<S>.SelectMany<S, T>(Func<S, IEnumerable<T>> func)`
     - `Bag<T> Bag<T>.Where<T>(Func<T, bool> func)`
+- BagEqual
+    - `Bag<bool> Bag<T>.BagEqual(Bag<T> b)`
      
 ## Utilities
 
