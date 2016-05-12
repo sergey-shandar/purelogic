@@ -43,7 +43,7 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
             - `Bag<long> Bag<long>.Sum()` 
             - `Bag<double> Bag<double>.Sum()`
             - `Bag<decimal> Bag<decimal>.Sum()`
-- Distinct/Except/Union
+- [Binary Operations](PureLogic/PureLogic/BinOperations.cs)
     - `Bag<T> Bag<T>.Distinct(Bag<T> b)`
     - `Bag<T> Bag<T>.Except(Bag<T> b)`
     - `Bag<T> Bag<T>.Intersect(Bag<T> b)`
