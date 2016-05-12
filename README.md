@@ -48,19 +48,18 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
     - `Bag<T> Bag<T>.Except(Bag<T> b)`
     - `Bag<T> Bag<T>.Intersect(Bag<T> b)`
     - `Bag<T> Bag<T>.Union(Bag<T> b)`
+    - `Bag<bool> Bag<T>.BagEqual(Bag<T> b)`
 - Empty
     - `Bag<T> Empty<T>()`
 - GroupBy
     - `Bag<KeyValuePair<K, V>> Bag<KeyValuePair<K, V>>.GroupBy(Func<V, V, V> func)`
     - `Bag<KeyValuePair<K, T>> Bag<T>.GroupBy(Func<T, K> keyFunc, Func<T, T, T> reduceFunc)`
-- SelectMany
+- [Select Many](PureLogic/PureLogic/SelectMany.cs)
     - `Bag<T> Bag<S>.OfType<S, T>()`
     - `Bag<T> Bag<S>.Select<S, T>(Func<S, T> func)`
     - `Bag<T> Bag<S>.SelectMany<S, T>(Func<S, IEnumerable<T>> func)`
     - `Bag<T> Bag<T>.Where<T>(Func<T, bool> func)`
-- BagEqual
-    - `Bag<bool> Bag<T>.BagEqual(Bag<T> b)`
-     
+
 ## Utilities
 
 - [Option](PureLogic/PureLogic/Option.cs)
