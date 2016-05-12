@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="AggregateX.cs" />
     <Compile Include="Bag.cs" />
+    <Compile Include="BinOperations.cs" />
     <Compile Include="DisjointUnion.cs" />
     <Compile Include="GroupBy.cs" />
     <Compile Include="Input.cs" />

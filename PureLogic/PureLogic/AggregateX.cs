@@ -4,6 +4,14 @@ namespace PureLogic
 {
     public static class AggregateX
     {
+        /// <summary>
+        /// See also https://msdn.microsoft.com/en-us/library/bb549218(v=vs.110).aspx
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="input"></param>
+        /// <param name="initial"></param>
+        /// <param name="func"></param>
+        /// <returns></returns>
         public static Bag<T> Aggregate<T>(this Bag<T> input, T initial, Func<T, T, T> func)
             => input
                 .DisjointUnion(initial.Const())
@@ -11,6 +19,13 @@ namespace PureLogic
                 .GroupBy(func)
                 .Select(i => i.Value);
 
+        /// <summary>
+        /// See also https://msdn.microsoft.com/en-us/library/bb548651(v=vs.110).aspx
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="input"></param>
+        /// <param name="func"></param>
+        /// <returns></returns>
         public static Bag<Option<T>> Aggregate<T>(this Bag<T> input, Func<T, T, T> func)
             => input
                 .Select(OptionX.Option)
