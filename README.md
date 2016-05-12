@@ -66,3 +66,7 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
 
 - [Option](PureLogic/PureLogic/Option.cs)
 - [NumericPolicy](PureLogic/PureLogic/NumericPolicy.cs)
+
+## Quiz
+
+Write a function which joins `IEnumerable<KeyValuePair<K, A>>` and `IEnumerable<KeyValuePair<K, B>>` using only `SelectMany`, `Concat` and `GroupBy`.
