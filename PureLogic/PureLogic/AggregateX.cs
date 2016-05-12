@@ -14,7 +14,7 @@ namespace PureLogic
         /// <returns></returns>
         public static Bag<T> Aggregate<T>(this Bag<T> input, T initial, Func<T, T, T> func)
             => input
-                .DisjointUnion(initial.Const())
+                .DisjointUnion(initial.ToBag())
                 .Select(i => new Void().WithValue(i))
                 .GroupBy(func)
                 .Select(i => i.Value);

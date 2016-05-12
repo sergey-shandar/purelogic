@@ -1,4 +1,6 @@
-﻿namespace PureLogic
+﻿using System.Linq;
+
+namespace PureLogic
 {
     public sealed class One: Reduce<Void>
     {
@@ -11,10 +13,10 @@
 
     public static class OneX
     {
-        public static Bag<T> Const<T>(this T value)
+        public static Bag<T> ToBag<T>(this T value)
             => One.Value.Select(_ => value);
 
         public static Bag<T> Empty<T>()
-            => One.Value.Where(_ => false).Select(_ => default(T));
+            => One.Value.SelectMany(_ => Enumerable.Empty<T>());
     }
 }
