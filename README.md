@@ -49,7 +49,8 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
     - `Bag<T> Bag<T>.Intersect(Bag<T> b)`
     - `Bag<T> Bag<T>.Union(Bag<T> b)`
     - `Bag<bool> Bag<T>.BagEqual(Bag<T> b)`
-- Empty
+- [To Bag](PureLogic/PureLogic/One.cs)
+    - `Bag<T> T.ToBag()`
     - `Bag<T> Empty<T>()`
 - GroupBy
     - `Bag<KeyValuePair<K, V>> Bag<KeyValuePair<K, V>>.GroupBy(Func<V, V, V> func)`
