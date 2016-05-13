@@ -16,6 +16,11 @@ namespace PureLogic
         public static Bag<T> ToBag<T>(this T value)
             => One.Value.Select(_ => value);
 
+        /// <summary>
+        /// See also https://msdn.microsoft.com/en-us/library/bb341042(v=vs.110).aspx
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public static Bag<T> Empty<T>()
             => One.Value.SelectMany(_ => Enumerable.Empty<T>());
     }

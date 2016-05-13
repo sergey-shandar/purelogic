@@ -37,7 +37,8 @@ namespace PureLogic
         public static IEnumerable<T> ToEnum<T>(this Option<T> option)
             => option.Accept(value => new[] { value }, Enumerable.Empty<T>());
 
-        public static Option<T> OptionBinaryFunc<T>(this Func<T, T, T> func, Option<T> a, Option<T> b)
-            => a.Accept(av => b.Accept(bv => func(av, bv), av).Option(), b);
+        public static Func<Option<T>, Option<T>, Option<T>> OptionBinaryFunc<T>(
+            this Func<T, T, T> func)
+            => (a, b) => a.Accept(av => b.Accept(bv => func(av, bv), av).Option(), b);
     }
 }

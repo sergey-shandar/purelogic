@@ -19,6 +19,13 @@ namespace PureLogic
 
     public static class DisjointUnionX
     {
+        /// <summary>
+        /// See also https://msdn.microsoft.com/en-us/library/bb302894(v=vs.110).aspx
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static Bag<T> DisjointUnion<T>(this Bag<T> a, Bag<T> b)
             => new DisjointUnion<T>(a, b);
     }
