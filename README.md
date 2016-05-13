@@ -49,11 +49,13 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
     - `Bag<T> Bag<T>.Intersect(Bag<T> b)`
     - `Bag<T> Bag<T>.Union(Bag<T> b)`
     - `Bag<bool> Bag<T>.BagEqual(Bag<T> b)`
-- Empty
+- [To Bag](PureLogic/PureLogic/One.cs)
+    - `Bag<T> T.ToBag()`
     - `Bag<T> Empty<T>()`
-- GroupBy
+- [GroupBy](PureLogic/PureLogic/GroupBy.cs)
     - `Bag<KeyValuePair<K, V>> Bag<KeyValuePair<K, V>>.GroupBy(Func<V, V, V> func)`
     - `Bag<KeyValuePair<K, T>> Bag<T>.GroupBy(Func<T, K> keyFunc, Func<T, T, T> reduceFunc)`
+    - `Bag<T> Bag<T>.Distinct()`
 - [Select Many](PureLogic/PureLogic/SelectMany.cs)
     - `Bag<T> Bag<S>.OfType<S, T>()`
     - `Bag<T> Bag<S>.Select<S, T>(Func<S, T> func)`
@@ -64,3 +66,7 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
 
 - [Option](PureLogic/PureLogic/Option.cs)
 - [NumericPolicy](PureLogic/PureLogic/NumericPolicy.cs)
+
+## Quiz
+
+Write a function which joins `IEnumerable<KeyValuePair<K, A>>` and `IEnumerable<KeyValuePair<K, B>>` using only `SelectMany`, `Concat` and `GroupBy`.
