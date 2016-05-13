@@ -108,6 +108,19 @@ namespace PureLogic
             return ab.GroupBy(r);
         }
 
+        public static Bag<Pair<Option<A>, Option<B>>> Join<K, A, B>(
+            this Bag<A> a,
+            Bag<B> b,
+            Func<A, K> aKey,
+            Func<B, K> bKey,
+            Func<A, A, A> aReduce,
+            Func<B, B, B> bReduce)
+        {
+            var ak = a.SelectWithKey(aKey);
+            var bk = b.SelectWithKey(bKey);
+            return ak.Join(bk, aReduce, bReduce).Select(v => v.Value);
+        }
+
         public static Bag<KeyValuePair<K, Pair<A, B>>> Left<K, A, B>(
             this Bag<KeyValuePair<K, Pair<Option<A>, B>>> bag)
             => bag.SelectValue(v => v.A.Select(a => a.WithB(v.B))).WhereValue();

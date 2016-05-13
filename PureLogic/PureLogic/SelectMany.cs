@@ -75,5 +75,8 @@ namespace PureLogic
         public static Bag<KeyValuePair<K, T>> WhereValue<K, T>(
             this Bag<KeyValuePair<K, Option<T>>> bag)
             => bag.SelectMany(p => p.Value.Select(v => p.Key.WithValue(v)).ToEnum());
+
+        public static Bag<KeyValuePair<K, T>> SelectWithKey<K, T>(this Bag<T> bag, Func<T, K> f)
+            => bag.Select(v => f(v).WithValue(v));
     }
 }
