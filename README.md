@@ -69,4 +69,4 @@ See [Enumerable Methods](https://msdn.microsoft.com/en-us/library/system.linq.en
 
 ## Quiz
 
-Write a function which joins `IEnumerable<KeyValuePair<K, A>>` and `IEnumerable<KeyValuePair<K, B>>` using only `SelectMany`, `Concat` and `GroupBy`.
+Write a function which joins `IEnumerable<KeyValuePair<K, A>>` and `IEnumerable<KeyValuePair<K, B>>` using only `SelectMany`, `Concat` and `GroupBy`. The signature of the function is `IEnumerable<KeyValuePair<K, Tuple<A?, B?>>> Join(this IEnumerable<KeyValuePair<K, A>> a, IEnumerable<KeyValuePair<K, B>> b)`.
